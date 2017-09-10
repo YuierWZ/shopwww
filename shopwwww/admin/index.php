@@ -1,3 +1,18 @@
+<?php
+session_start();
+require_once '../lib/image.func.php';
+require_once '../lib/common.func.php';
+require_once '../lib/string.func.php';
+require_once '../lib/page.func.php';
+require_once "../configs/configs.php";
+require_once '../core/admin.inc.php';
+// require_once '../core/cate.inc.php';
+// require_once '../core/pro.inc.php';
+// require_once '../core/album.inc.php';
+require_once '../lib/upload.func.php';
+// require_once '../core/user.inc.php';
+checkLogined();
+?>
 <!doctype html>
 <html>
 <head>
