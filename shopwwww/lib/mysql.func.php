@@ -1,5 +1,15 @@
 <?php 
-require_once '../include.php';
+require_once '../lib/image.func.php';
+require_once '../lib/common.func.php';
+require_once '../lib/string.func.php';
+require_once '../lib/page.func.php';
+require_once "../configs/configs.php";
+require_once '../core/admin.inc.php';
+// require_once '../core/cate.inc.php';
+// require_once '../core/pro.inc.php';
+// require_once '../core/album.inc.php';
+require_once '../lib/upload.func.php';
+// require_once '../core/user.inc.php';
 //链接数据库
 function connet()
 {
@@ -7,7 +17,7 @@ function connet()
         $severname = "localhost";
         // $username = "test01";
         // $password = "test01";
-        $link = new PDO("mysql:host=$severname;dbname=DB_DBNAME", DB_USER, DB_PWD);
+        $link = new PDO("mysql:host=$severname;dbname=shopwww", DB_USER, DB_PWD);
         $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         echo $e->getMessage();
