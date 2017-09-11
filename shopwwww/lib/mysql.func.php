@@ -29,9 +29,11 @@ function insert($table, $array)
 {
     try {
         $conn = connet();
-        $keys = join(",", array_keys($array));
-        $vals = "," . join("", array_values($array)) . ",";
-        $sql = "inser into {table} ({$keys}) values({$vals})";
+//         $keys = join(",", array_keys($array));
+//         $vals = "," . join("", array_values($array)) . ",";
+        $keys=join(",",array_keys($array));
+        $vals="'".join("','",array_values($array))."'";
+        $sql="insert {$table}($keys) values({$vals})";
         $result = $conn->exec($sql);
         return $conn->lastInsertId();
     } catch (PDOException $e) {

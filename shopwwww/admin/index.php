@@ -23,8 +23,8 @@ checkLogined();
 
 <body>
     <div class="head">
-            <div class="logo fl"><a href="#"></a></div>
-            <h3 class="head_text fr">慕课电子商务后台管理系统</h3>
+<!--             <div class="logo fl"><a href="#"></a></div> -->
+            <h3 class="head_text fr">睿普蕾斯系统</h3>
     </div>
     <div class="operation_user clearfix">
        <!--   <div class="link fl"><a href="#">慕课</a><span>&gt;&gt;</span><a href="#">商品管理</a><span>&gt;&gt;</span>商品修改</div>-->

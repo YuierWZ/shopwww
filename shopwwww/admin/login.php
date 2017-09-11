@@ -16,7 +16,8 @@
 	<div class="logoBar login_logo">
 		<div class="comWidth">
 			<div class="logo fl">
-				<a href="#"><img src="images/logo.jpg" alt="慕课网"></a>
+<!-- 				<a href="#"><img src="images/logo.jpg" alt="慕课网"></a> -->
+			<h3 class="welcome_title"></h3>
 			</div>
 			<h3 class="welcome_title">欢迎登陆</h3>
 		</div>

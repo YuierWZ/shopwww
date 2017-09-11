@@ -17,6 +17,20 @@ function checkLogined()
     }
 }
 
+    // 添加 管理员
+function addAdmin()
+{
+    $arr = $_POST;
+    if (insert("www_admin", $arr)) {
+        $mes = "添加成功!<br/><a href='addAdmin.php'>继续添加</a>|<a href='listAdmin.php'>查看管理员列表</a>";
+    } else {
+        $mes = "添加失败!<br/><a href='addAdmin.php'>重新添加</a>";
+    }
+    return $mes;
+}
+
+
+
 function logout()
 {
     $_SESSION = array();
