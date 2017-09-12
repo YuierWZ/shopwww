@@ -45,15 +45,15 @@ function update($table, $array, $where = NULL)
 {
     try {
         $conn = connet();
-        foreach ($array as $key->$val) {
-            if ($sep == null) {
-                $sep = "";
-            } else {
-                $sep = ",";
+        foreach($array as $key=>$val){
+            if($str==null){
+                $sep="";
+            }else{
+                $sep=",";
             }
-            $str .= $sep . $key . "='" . $val . "'";
+            $str.=$sep.$key."='".$val."'";
         }
-        $sql = "update {$table} set {$str}" . ($where == null ?: " where" . $where);
+        $sql="update {$table} set {$str} ".($where==null?null:" where ".$where);
         $result = $conn->exec($sql);
         if ($result) {
             return $result;
