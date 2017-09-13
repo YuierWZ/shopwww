@@ -8,7 +8,6 @@ $pageSize = 2;
 // 得到总页码数
 $totalPage = ceil($totalRows / $pageSize);
 $pageSize=2;
-$page=null;
 $page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
 if ($page < 1 || $page == null || ! is_numeric($page)) {
     $page = 1;
