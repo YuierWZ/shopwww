@@ -1,6 +1,28 @@
 <?php
 require_once '../core/admin.inc.php';
-$rows = getAllAdmin();
+// $pageSize=2;
+// $rows=getAdminByPage($pageSize);
+$sql = "select * from www_admin";
+$totalRows = getResultNum($sql);
+$pageSize = 2;
+// 得到总页码数
+$totalPage = ceil($totalRows / $pageSize);
+$pageSize=2;
+$page=null;
+$page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
+if ($page < 1 || $page == null || ! is_numeric($page)) {
+    $page = 1;
+}
+if ($page >= $totalPage)
+        $page = $totalPage;
+    $offset = ($page - 1) * $pageSize;
+    $sql = "select id,username,email from www_admin limit {$offset},{$pageSize}";
+    $rows=fetchAll($sql);
+    
+    
+// $rows = getAllAdmin(); //不想分页时调用此函数
+
+
 if (! $rows) {
     alertMes("没有管理员 请添加", "addAdmin.php");
     exit();
