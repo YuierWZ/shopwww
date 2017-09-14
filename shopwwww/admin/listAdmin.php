@@ -1,5 +1,6 @@
 <?php
 require_once '../core/admin.inc.php';
+include_once '../lib/page.func.php';
 // $pageSize=2;
 // $rows=getAdminByPage($pageSize);
 $sql = "select * from www_admin";
